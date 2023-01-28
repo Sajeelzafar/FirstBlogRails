@@ -28,16 +28,16 @@ RSpec.describe User, type: :model do
         expect(subject).to_not be_valid
     end
 
-    it 'latest_posts should return last posts' do
-        post1 = Post.create(author: subject, title: 'Hello', text: 'This is my first post')
+    it 'latest_posts should return last post' do
+        post1 = Post.create(author: subject, title: 'Hello', text: 'This is my first post', comments_counter: 1, likes_counter: 1)
         expect(subject.last_posts).to include(post1)
     end
 
     it 'Should display the last three posts done by subject' do
-        post1 = Post.create(author: subject, title: 'Hello', text: 'This is my first post') 
-        post2 = Post.create(author: subject, title: 'Hi', text: 'This is my second post')
-        post3 = Post.create(author: subject, title: 'Hi again', text: 'This is my third post')
-        post4 = Post.create(author: subject, title: 'Final words', text: 'This is my fourth post')
+        post1 = Post.create(author: subject, title: 'Hello', text: 'This is my first post', comments_counter: 1, likes_counter: 1) 
+        post2 = Post.create(author: subject, title: 'Hi', text: 'This is my second post', comments_counter: 1, likes_counter: 1)
+        post3 = Post.create(author: subject, title: 'Hi again', text: 'This is my third post', comments_counter: 1, likes_counter: 1)
+        post4 = Post.create(author: subject, title: 'Final words', text: 'This is my fourth post', comments_counter: 1, likes_counter: 1)
         posts = subject.last_posts
         expect(posts).to match_array([post2, post3, post4])
     end
