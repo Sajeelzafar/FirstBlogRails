@@ -24,6 +24,16 @@ RSpec.describe Post, type: :model do
         expect(user.posts_counter).to eq(3)
     end
 
+    it 'Should have comments counter greater than or equal to zero' do
+        post.comments_counter = -1
+        expect(post).to_not be_valid
+    end
+
+    it 'Should have likes counter greater than or equal to zero' do
+        post.likes_counter = -1
+        expect(post).to_not be_valid
+    end
+
     it 'latest_comment should return last comment' do
         comment1 = Comment.create(post: post, author: user, text: 'Hi Tom!' )
         expect(post.last_comments).to include(comment1)
