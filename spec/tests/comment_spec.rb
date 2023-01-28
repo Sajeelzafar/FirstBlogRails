@@ -7,7 +7,6 @@ RSpec.describe Comment, type: :model do
                      likes_counter: 1)
   comment = Comment.create(post:, author: user, text: 'Hi Tom!')
 
-
   it 'Text should be present' do
     comment.text = nil
     expect(comment).to_not be_valid

@@ -7,7 +7,6 @@ RSpec.describe Post, type: :model do
                      likes_counter: 1)
   comment1 = Comment.create(post:, author: user, text: 'Hi Tom!')
 
-
   it 'Should have not have more than 250 characters' do
     post.title = 'supercajafajalysticxpldoshiassupercajafajalysticxpldoshias
     supercajafajalysticxpldoshiassupercajafajalysticxpldoshiassupercajafajalysticxpldoshias
