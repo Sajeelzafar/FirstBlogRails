@@ -6,21 +6,23 @@
   </head>
 
   <body>
-    <p> This is the Posts page and currently you have selected <%= params[:id] %> Post ID. </p>
-    
-        
-      <h2>Post: <%= @post.title %></h2> 
-      <span><%= @post.text %></span><br>
-      <span>Comments counter = <%= @post.comments_counter %></span>
-      <span>Likes counter = <%= @post.likes_counter %></span>
-      <br><br>
-      <% @post_comments.each do |comment| %>
-        <div>
-          <span><%= @user.name %></span> 
-          <span>: <%= comment.text %></span>
+    <div class="postsMainBox">
+      <div class="postSubBox">
+        <h2><%= @post.title %> by <%= @post.author.name %></h2>
+        <div class="userspageCounter">
+          <span>Comments: <%= @post.comments_counter %>, </span>
+          <span>Likes: <%= @post.likes_counter %></span>
         </div>
-      <% end %>
-      <br><br><br>
-  
+        <span><%= @post.text %></span>
+      </div>
+      <div class="usersbioBox">
+        <% @post_comments.each do |comment| %>
+          <div>
+            <span><%= comment.author.name %></span> 
+            <span>: <%= comment.text %></span>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </body>
 </html>
