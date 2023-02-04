@@ -7,5 +7,14 @@
 
   <body>
     <h1> This is the Users page</h1>
+    <% @users.each do |user| %>
+      <a href="/users/<%= user.id%>">
+        <div></div>
+        <div>
+          <h2><%= user.name %></h2> 
+          <span>Number Of Posts: <%= user.posts_counter %></span>
+        </div>
+      </a>
+    <% end %>
   </body>
 </html>
