@@ -12,7 +12,7 @@
     <div>Bio: <%= @user.bio %></div>
     <% @user_posts.each do |post| %>
       <div>
-        <h2>Post #<%= post.id %>: <%= post.title %></h2> 
+        <h2>Post: <%= post.title %></h2> 
         <span><%= post.text %></span><br>
         <span>Comments counter = <%= post.comments_counter %></span>
         <span>Likes counter = <%= post.likes_counter %></span>

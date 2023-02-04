@@ -7,5 +7,19 @@
 
   <body>
     <h1> This is the Posts page</h1>
+    <% @user_posts.each do |post| %>
+        
+          <h2>Post: <%= post.title %></h2> 
+          <span><%= post.text %></span><br>
+          <span>Comments counter = <%= post.comments_counter %></span>
+          <span>Likes counter = <%= post.likes_counter %></span>
+          <br><br>
+          <% post.last_comments.each do |comment| %>
+            <div>
+              <span><%= @user.name %></span> 
+              <span>: <%= comment.text %></span>
+            </div>
+          <% end %>
+      <% end %>
   </body>
 </html>
