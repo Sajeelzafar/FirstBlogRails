@@ -6,21 +6,35 @@
   </head>
 
   <body>
-    <h1> This is the Posts page</h1>
+  <div class="usersMainPage">
+    <div class="linksUserPage">
+      <div class="userboxPlaceholder"></div>
+      <div class="userpageInformation">
+        <h2 class="userpageHeading"><%= @user.name %></h2>
+        <span class="userpagePosts">Number of posts = <%= @user.posts_counter%></span>
+      </div>
+    </div>
+    <div class="postsMainBox">
     <% @user_posts.each do |post| %>
-        
-          <h2>Post: <%= post.title %></h2> 
-          <span><%= post.text %></span><br>
-          <span>Comments counter = <%= post.comments_counter %></span>
-          <span>Likes counter = <%= post.likes_counter %></span>
-          <br><br>
-          <% post.last_comments.each do |comment| %>
-            <div>
-              <span><%= @user.name %></span> 
-              <span>: <%= comment.text %></span>
-            </div>
-          <% end %>
-          <br><br><br>
-      <% end %>
+      <div class="usersbioBox">
+        <h2>Post: <%= post.title %></h2> 
+        <span><%= post.text %></span><br>
+        <div class="userspageCounter">
+          <span>Comments: <%= post.comments_counter %>, </span>
+          <span>Likes: <%= post.likes_counter %></span>
+        </div>
+      </div>
+      <div class="usersbioBox">
+        <% post.last_comments.each do |comment| %>
+          <div>
+            <span><%= @user.name %></span> 
+            <span>: <%= comment.text %></span>
+          </div>
+        <% end %>
+        <br><br><br>
+      </div>
+    <% end %>
+    </div>
+  </div>
   </body>
 </html>
