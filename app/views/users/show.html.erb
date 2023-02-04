@@ -6,7 +6,18 @@
   </head>
 
   <body>
-    <h1><%=params %></h1>
-    <p> This is the Users page and currently you have selected <%= params[:id] %> user ID. </p>
+    <h1> This is the Users page and currently you have selected <%= params[:id] %> user ID. </h1>
+    <h2><%= @user.name %></h2>
+    <span>Number of posts = <%= @user.posts_counter%></span><br>
+    <div>Bio: <%= @user.bio %></div>
+    <% @user_posts.each do |post| %>
+      <div>
+        <h2>Post #<%= post.id %>: <%= post.title %></h2> 
+        <span><%= post.text %></span><br>
+        <span>Comments counter = <%= post.comments_counter %></span>
+        <span>Likes counter = <%= post.likes_counter %></span>
+      </div>
+    <% end %>
+    <a href="/users/<%= @user.id%>/posts"><button>See all posts</button></a>
   </body>
 </html>
