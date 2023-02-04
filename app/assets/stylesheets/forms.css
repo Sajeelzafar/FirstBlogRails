@@ -1,0 +1,19 @@
+.postnewform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.formtitle,
+.formbutton {
+  width: 100%;
+  height: 2rem;
+}
+
+.forminput {
+  width: 100%;
+  height: 5rem;
+}

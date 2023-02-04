@@ -1,7 +1,10 @@
+<div class="postnewform">
 <h1>New Post</h1>
 
 <%= form_with model: @post do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :text %>
-  <%= f.submit %>
+    <%= f.text_field :title, :placeholder => placeholder="Title", class: "formtitle" %>
+    <%= f.text_area :text, :placeholder => placeholder="Text", class: "forminput" %>
+    <%= f.submit 'Submit', :class => "formbutton" %>
+    
 <% end %>
+</div>
