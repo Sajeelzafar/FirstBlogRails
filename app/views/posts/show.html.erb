@@ -17,7 +17,8 @@
         <span><%= @post.text %></span>
       </div>
       <div class="usersbioBox">
-        <% @post_comments.each do |comment| %>
+        <% @post_comments.includes(:author).each do |comment| %>
+          <% puts "#{comment.text} is written by #{comment.author.name}" %>
           <div>
             <span><%= comment.author.name %></span> 
             <span>: <%= comment.text %></span>
