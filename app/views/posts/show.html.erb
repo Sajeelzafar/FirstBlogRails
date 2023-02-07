@@ -24,12 +24,15 @@
           </div>
         <% end %>
       </div>
+      <%= form_with model: @like, url: likes_path do |f| %>
+        <%= f.hidden_field :post_id, value: @post.id %>
+        <%= f.submit "Like", :class => "likeButton" %>
+      <% end %>
+      <%= flash[:error] %>
+
+      <a href="/posts/<%= @post.id %>/comments/new"><button class="newpostButton">Click here to create new comment</button></a>
     </div>
 
-    <%= form_with model: @like, url: likes_path do |f| %>
-      <%= f.hidden_field :post_id, value: @post.id %>
-      <%= f.submit "Like" %>
-    <% end %>
-    <%= flash[:error] %>
+    
   </body>
 </html>
