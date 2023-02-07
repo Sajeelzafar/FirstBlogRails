@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 RSpec.describe 'User Show Page', type: :system do
   before do
     @tom = User.create(

@@ -73,7 +73,9 @@ body {
   text-align: right;
 }
 
-.postsButton, .newpostButton, .likeButton {
+.postsButton,
+.newpostButton,
+.likeButton {
   border: 2px solid black;
   box-shadow: 2px 2px 2px 2px #888;
   cursor: pointer;
@@ -85,7 +87,8 @@ body {
   width: 15rem;
 }
 
-.postsButton, .likeButton {
+.postsButton,
+.likeButton {
   padding: 10%;
   width: 10rem;
 }
