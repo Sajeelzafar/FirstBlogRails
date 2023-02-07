@@ -8,7 +8,7 @@
   <body>
   <div class="usersMainPage">
     <div class="linksUserPage">
-      <div class="userboxPlaceholder"></div>
+      <div class="userboxPlaceholder"><img src="<%= @user.photo %>" alt="user photo" /></div>
       <div class="userpageInformation">
         <h2 class="userpageHeading"><%= @user.name %></h2>
         <span class="userpagePosts">Number of posts = <%= @user.posts_counter%></span>
@@ -27,7 +27,7 @@
         <div class="usersbioBox">
           <% post.last_comments.each do |comment| %>
             <div>
-              <span><%= @user.name %></span> 
+              <span><%= comment.author.name %></span> 
               <span>: <%= comment.text %></span>
             </div>
           <% end %>
@@ -35,6 +35,8 @@
         </div>
       </a>
     <% end %>
+    <a href="/posts/new"><button class="newpostButton">Click here to create new post</button></a>
   </div>
+  
   </body>
 </html>

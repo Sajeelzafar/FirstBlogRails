@@ -81,6 +81,12 @@ In the project directory, you can run:
 - Twitter: [@SajeelZafar6](https://twitter.com/SajeelZafar6)
 - LinkedIn: [Sajeel Zafar](https://www.linkedin.com/in/sajeelzafar/)
 
+👤 **Nurgul**
+
+- GitHub: [@githubhandle](https://github.com/NurkaAmre)
+- Twitter: [@twitterhandle](https://twitter.com/AmreNurgul)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/amre-nurgul/)
+
 ## Future Feature
 
 - build UI 

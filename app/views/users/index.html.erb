@@ -10,7 +10,7 @@
   <div class="usersMainPage">
     <% @users.each do |user| %>
       <a class="linksUserPage" href="/users/<%= user.id%>">
-        <div class="userboxPlaceholder"></div>
+        <div class="userboxPlaceholder"><img src="<%= user.photo %>" alt="user photo" /></div>
         <div class="userpageInformation">
           <h2 class="userpageHeading"><%= user.name %></h2>
           <span class="userpagePosts">Number Of Posts: <%= user.posts_counter %></span>
