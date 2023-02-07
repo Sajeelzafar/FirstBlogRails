@@ -8,9 +8,9 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'rails-controller-testing'
 
 group :development, :test do
-  gem "database_cleaner"
-  gem "rspec-rails"
-  gem "webdrivers"
+  gem 'database_cleaner'
+  gem 'rspec-rails'
+  gem 'webdrivers'
 end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -78,5 +78,4 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
 end
