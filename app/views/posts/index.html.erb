@@ -27,7 +27,7 @@
         <div class="usersbioBox">
           <% post.last_comments.each do |comment| %>
             <div>
-              <span><%= @user.name %></span> 
+              <span><%= comment.author.name %></span> 
               <span>: <%= comment.text %></span>
             </div>
           <% end %>

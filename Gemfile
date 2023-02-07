@@ -10,6 +10,7 @@ gem 'rails-controller-testing'
 group :development, :test do
   gem "database_cleaner"
   gem "rspec-rails"
+  gem "webdrivers"
 end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
