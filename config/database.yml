@@ -23,10 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: firstblograils_development
+  database: blog_app_development
   server: localhost
-  username: sajeel
-  password: abcd123
+  username: postgres
+  password: "#Dovaridu90"
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,10 +60,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: firstblograils_test
+  database: blog_app_test
   server: localhost
-  username: sajeel
-  password: abcd123
+  username: postgres
+  password: "#Dovaridu90"
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -87,7 +87,7 @@ test:
 #
 production:
   <<: *default
-  database: firstblograils_production
+  database: blog_app_production
   server: localhost
-  username: sajeel
-  password: abcd123
+  username: postgres
+  password: "#Dovaridu90"
