@@ -60,7 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: firstblograils_test
+  database: firstblograils_development
   server: localhost
   username: sajeel
   password: abcd123
@@ -87,7 +87,7 @@ test:
 #
 production:
   <<: *default
-  database: firstblograils_production
+  database: firstblograils_development
   server: localhost
   username: sajeel
   password: abcd123
