@@ -6,6 +6,7 @@ ruby '3.1.3'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'devise'
 gem 'rails-controller-testing'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'database_cleaner'
