@@ -3,10 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
-gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'bootstrap-sass'
 gem 'devise'
 gem 'rails-controller-testing'
-gem 'bootstrap-sass'
+gem 'rubocop', '>= 1.0', '< 2.0'
 
 group :development, :test do
   gem 'database_cleaner'
